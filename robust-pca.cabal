@@ -1,0 +1,35 @@
+name:                robust-pca
+version:             0.0.0.1
+synopsis:            Robust Principal Component Analysis a la Netflix/surus
+description:         Robust Principal Component Analysis a la Netflix/surus in haskell
+homepage:            https://github.com/jamesthompson/robust-pca
+license:             BSD3
+license-file:        LICENSE
+author:              James R. Thompson
+maintainer:          jamesthompsonoxford@gmail.com
+copyright:           2018 James R. Thompson
+category:            Mathematics
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:     src
+  exposed-modules:    RobustPCA
+                      Utils
+  ghc-options:        -Wall -fwarn-tabs
+  default-extensions: NoImplicitPrelude
+  build-depends:      base
+                    , hmatrix
+                    , foldl
+                    , foldl-statistics
+                    , lens
+                    , monad-loops
+                    , mtl
+                    , transformers
+                    , vector
+  default-language:   Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/jamesthompson/robust-pca
